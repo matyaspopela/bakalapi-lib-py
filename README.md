@@ -4,6 +4,32 @@ A Python library for accessing the Bakalapi timetable API. This library provides
 
 ## Installation
 
+### Install from local directory
+
+If you have the source code, you can install it directly:
+
+```bash
+pip install .
+```
+
+Or in development mode (editable install):
+
+```bash
+pip install -e .
+```
+
+### Install from PyPI (if published)
+
+If the package is published to PyPI, you can install it with:
+
+```bash
+pip install bakalapi
+```
+
+### Development Installation
+
+For development, you can also install dependencies separately:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -155,6 +181,31 @@ Get the timetable for a specific class.
 - **Parameters cannot be combined**: You can only query by one type (teacher, room, or class) at a time.
 - The API endpoint is: `https://bakalapi-production.up.railway.app/api/timetable/`
 - All parameters are automatically URL-encoded for safe transmission.
+
+## Publishing to PyPI
+
+If you want to publish this package to PyPI so others can install it with `pip install bakalapi`:
+
+1. Install build tools:
+   ```bash
+   pip install build twine
+   ```
+
+2. Build the package:
+   ```bash
+   python -m build
+   ```
+
+3. Upload to PyPI (test first with TestPyPI):
+   ```bash
+   # Test upload
+   twine upload --repository testpypi dist/*
+   
+   # Production upload
+   twine upload dist/*
+   ```
+
+Note: Update the `pyproject.toml` file with your actual author information and repository URLs before publishing.
 
 ## License
 
