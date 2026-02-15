@@ -38,15 +38,14 @@ class BakalapiClient:
         >>> print(timetable.timetable[0].subject)
     """
     
-    def __init__(self, base_url: str, timeout: int = 10):
+    def __init__(self, timeout: int = 10):
         """
         Initialize the Bakalapi client.
         
         Args:
-            base_url: The base URL for the API (e.g., "https://bakalapi-production.up.railway.app/api/timetable").
             timeout: Request timeout in seconds. Defaults to 10.
         """
-        self.base_url = base_url
+        self.base_url = "https://bakalapi-production-ed90.up.railway.app/api/timetable"
         self.timeout = timeout
         self.session = requests.Session()
         self.session.headers.update({
