@@ -38,6 +38,8 @@ ENV/
 .pytest_cache/
 .coverage
 htmlcov/
+reproduce_issue.py
+verify_url_fixed.py
 
 # Distribution
 *.whl

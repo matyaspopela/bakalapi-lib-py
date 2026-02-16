@@ -8,7 +8,7 @@ by teacher, room, or class.
 from .client import BakalapiClient, BakalapiError, BakalapiAPIError
 from .models import Hour, TimetableEntry, TimetableResponse
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __all__ = [
     "BakalapiClient",
     "BakalapiError",
