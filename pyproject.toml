@@ -35,7 +35,8 @@ Repository = "https://github.com/yourusername/bakalapi-libs"
 Issues = "https://github.com/yourusername/bakalapi-libs/issues"
 
 [tool.setuptools]
-packages = ["bakalapi"]
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.setuptools.package-data]
 "*" = ["py.typed"]
